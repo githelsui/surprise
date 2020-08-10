@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
 body {
-	font-family: 'Indie Flower', cursive !important;
-  background: #FDE3A7; /*CAPE HONEY*/
+	font-family: 'Source Code Pro', monospace;
+  background: #000000; /*CAPE HONEY*/
 	margin: 0px;
 	padding: 0px;
 }
@@ -15,7 +16,7 @@ body {
 h4 {
 	font-size: 26px;
 	line-height: 1px;
-	font-family: 'Amatic SC', cursive !important;
+	font-family: 'Source Code Pro', monospace;
 }
 
 .color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
@@ -108,7 +109,8 @@ h4 {
 }
 
 .card .details p {
-	font-size: 15px;
+	font-size: 12px;
+  color: #000000;
 	line-height: 5px;
 	transform: rotate(-10deg);
 	padding: 0 0 0 20px;
@@ -116,8 +118,52 @@ h4 {
 
 .card .details h4 {
 	text-align: center;
+  font-size: 15px;
 }
 
 .text-right {
 	text-align: right;
 }
+
+div#corner-triangle {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 0 200px 200px 0; /* adjust for size of triangle */
+  border-color: transparent #da0039 transparent transparent; /* adjust for color of triangle */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  color: white;
+  text-shadow: 0 0 25px 9px #fff;
+  -webkit-filter: drop-shadow(0 1px 9px #000000);
+  filter: drop-shadow(0 1px 9px #000000);
+}
+div#corner-triangle .corner-triangle-text {
+  position: relative;
+  font-size: 2.1em;
+  top: 0;
+  right: -90px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 200;
+  line-height: 1.1;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+div#corner-triangle .corner-triangle-text span.corner-triangle-firstline {
+  margin-left: 29px;
+}
+div#corner-triangle .corner-triangle-text a {
+  color: white;
+}
+div#corner-triangle .corner-triangle-text a:hover,
+div#corner-triangle .corner-triangle-text a:link,
+div#corner-triangle .corner-triangle-text a:visited,
+div#corner-triangle .corner-triangle-text a:active,
+div#corner-triangle .corner-triangle-text a:focus {
+  text-decoration: none;
